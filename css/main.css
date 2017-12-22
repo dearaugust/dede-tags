@@ -7,6 +7,7 @@ a:focus{outline: 0;}
 @media (min-width:768px){.container{width:auto}}
 @media (min-width:992px){.container{width:auto}}
 @media (min-width:1200px){.container{width:auto}}
+
 img{max-width:100%;}
 .mt20{margin-top:20px;}
 body{position: relative;}
@@ -33,6 +34,7 @@ body{position: relative;}
 .article-title{margin-top: 0;font-size: 26px;line-height: 36px;color: #555;}
 .container-no-sidebar .content{margin-right: 0;padding: 0 30px 20px;}
 .col-sm-5{width:20%}
+@media (max-width:1400px){.col-sm-5 {width: 25%;}}
 .alert{padding:15px;margin-bottom:20px;border:1px solid transparent;border-radius:4px}
 .alert-success,.copy{position:relative;}
 .alert-success{background-color:#dff0d8;border-color:#d6e9c6;color:#3c763d}
