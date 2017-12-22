@@ -35,241 +35,175 @@
 </head>
 
 <body>
-	<div class="container container-no-sidebar">
-		<div class="content">
-			<header class="article-header">
-				<h1 class="article-title">dedecms常用模板标签</h1>
-			</header>
-<div class="row">
-<div class="col-xs-4 col-sm-5">
-<h3 class="text-center">内容</h3>
-<ul class="taglink tagicon5">
+<div class="container container-no-sidebar">
+	<div class="content">
+		<header class="article-header">
+			<h1 class="article-title">dedecms常用模板标签</h1>
+		</header>
+		<div class="row">
+			<div class="col-xs-5 col-sm-5">
+				<h3 class="text-center">内容</h3>
+				<ul class="taglink tagicon5">
 <li>
 <textarea class="hide">
 <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
-<meta name="keywords" content="{dede:field.keywords/}" />
-<meta name="description" content="{dede:field.description function=html2text(@me)/}" />
-</textarea>
-<a href="javascirpt:;">
-<span>标题|关键词|描述</span>&lt;title&gt;&lt;/title&gt;</a>
+<meta name="keywords" content="{dede:field.keywords/}"/>
+<meta name="description" content="{dede:field.description function=html2text(@me)/}"/></textarea>
+<a href="javascirpt:;"><span>标题|关键词|描述</span>&lt;title&gt;&lt;/title&gt;</a>
 </li>
 <li>
 <textarea class="hide">
 <meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/view.php?aid={dede:field.id/}">
-<script type="text/javascript">
-if (window.location.toString().indexOf('pref=padindex') != -1) {} else {
-if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (
-/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/
-.test(navigator.userAgent))) {
-if (window.location.href.indexOf("?mobile") < 0) {
-try {
-if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-window.location.href = "{dede:global.cfg_mobileurl/}/view.php?aid={dede:field.id/}";
-} else if (/iPad/i.test(navigator.userAgent)) {} else {}
-} catch (e) {}
-}
-}
-}
-</script>
-</textarea>
-<a href="javascirpt:;">
-<span>跳转到手机站</span>mobile-agent</a>
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/view.php?aid={dede:field.id/}";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script></textarea>
+<a href="javascirpt:;"><span>跳转到手机站</span>mobile-agent</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.title/}</textarea>
-<a href="javascirpt:;">
-<span>文章标题</span>dede:field.title</a>
+<a href="javascirpt:;"><span>文章标题</span>dede:field.title</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.pubdate function="MyDate('Y-m-d',@me)"/}</textarea>
-<a href="javascirpt:;">
-<span>文章时间</span>dede:field.pubdate</a>
+<a href="javascirpt:;"><span>文章时间</span>dede:field.pubdate</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.writer runphp=yes}@me = (empty(@me) ? "admin" : "@me");{/dede:field.writer}</textarea>
-<a href="javascirpt:;">
-<span>文章作者</span>dede:field.writer</a>
+<a href="javascirpt:;"><span>文章作者</span>dede:field.writer</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.source runphp=yes}@me = (empty(@me) ? "本站" : "@me");{/dede:field.source}</textarea>
-<a href="javascirpt:;">
-<span>文章来源</span>dede:field.source</a>
+<a href="javascirpt:;"><span>文章来源</span>dede:field.source</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:global.cfg_basehost/}{dede:field.id runphp='yes'}$result=GetOneArchive(@me);@me=$result['arcurl'];{/dede:field.id}</textarea>
-<a href="javascirpt:;">
-<span>文章链接</span>dede:field.arcurl</a>
+<a href="javascirpt:;"><span>文章链接</span>dede:field.arcurl</a>
 </li>
 <li>
 <textarea class="hide">
-<script src="{dede:field.phpurl/}/count.php?view=yes&aid={dede:field.id/}&mid={dede:field.mid/}" type='text/javascript' language="javascript"></script>
-</textarea>
-<a href="javascirpt:;">
-<span>文章阅读数</span>dede:field.click</a>
+<script src="{dede:field.phpurl/}/count.php?view=yes&aid={dede:field.id/}&mid={dede:field.mid/}" type='text/javascript' language="javascript"></script></textarea>
+<a href="javascirpt:;"><span>文章阅读数</span>dede:field.click</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.body/}</textarea>
-<a href="javascirpt:;">
-<span>文章内容</span>dede:field.body</a>
+<a href="javascirpt:;"><span>文章内容</span>dede:field.body</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:pagebreak/}</textarea>
-<a href="javascirpt:;">
-<span>内容分页条</span>dede:pagebreak</a>
+<a href="javascirpt:;"><span>内容分页条</span>dede:pagebreak</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:likearticle mytypeid='' row='' col='' titlelen='' infolen=''}{/dede:likearticle}</textarea>
-<a href="javascirpt:;">
-<span>相关文档</span>dede:likearticle</a>
+<a href="javascirpt:;"><span>相关文档</span>dede:likearticle</a>
 </li>
 <li>
 <textarea class="hide">
-{dede:tag row='30' sort='new' getall='0'}
-<a href="[field:link/]">[field:tag /]</a>{/dede:tag}</textarea>
-<a href="javascirpt:;">
-<span>TAG标签</span>dede:tag</a>
+{dede:tag row='30' sort='new' getall='0'}<a href="[field:link/]">[field:tag /]</a>{/dede:tag}</textarea>
+<a href="javascirpt:;"><span>TAG标签</span>dede:tag</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:prenext get=pre/}{dede:prenext get=next/}</textarea>
-<a href="javascirpt:;">
-<span></span>上一篇 下一篇</a>
+<a href="javascirpt:;"><span></span>上一篇 下一篇</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field name=imgurls alt=图片输出区 row=1}[field:imgsrc/]{/dede:field}</textarea>
-<a href="javascirpt:;">
-<span>图集图片调用</span>imgurls</a>
+<a href="javascirpt:;"><span>图集图片调用</span>imgurls</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:productimagelist}[field:imgsrc/][field:text/]{/dede:productimagelist}</textarea>
-<a href="javascirpt:;">
-<span>图集图片调用</span>productimagelist</a>
+<a href="javascirpt:;"><span>图集图片调用</span>productimagelist</a>
 </li>
-</ul>
-</div>
-<div class="col-xs-4 col-sm-5">
-<h3 class="text-center">列表</h3>
-<ul class="taglink tagicon4">
+				</ul>
+			</div>
+			<div class="col-xs-5 col-sm-5">
+				<h3 class="text-center">列表</h3>
+				<ul class="taglink tagicon4">
 <li>
 <textarea class="hide">
 <title>{dede:field.title/} - {dede:global.cfg_webname/}</title>
-<meta name="keywords" content="{dede:field.keywords/}" />
-<meta name="description" content="{dede:field.description function=html2text(@me)/}" />
-</textarea>
-<a href="javascirpt:;">
-<span>标题|关键词|描述</span>&lt;title&gt;&lt;/title&gt;</a>
+<meta name="keywords" content="{dede:field.keywords/}"/>
+<meta name="description" content="{dede:field.description function=html2text(@me)/}"/></textarea>
+<a href="javascirpt:;"><span>标题|关键词|描述</span>&lt;title&gt;&lt;/title&gt;</a>
 </li>
 <li>
 <textarea class="hide">
 <meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/list.php?tid={dede:field.id/}">
-<script type="text/javascript">
-if (window.location.toString().indexOf('pref=padindex') != -1) {} else {
-if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (
-/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/
-.test(navigator.userAgent))) {
-if (window.location.href.indexOf("?mobile") < 0) {
-try {
-if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-window.location.href = "{dede:global.cfg_mobileurl/}/list.php?tid={dede:field.id/}";
-} else if (/iPad/i.test(navigator.userAgent)) {} else {}
-} catch (e) {}
-}
-}
-}
-</script>
-</textarea>
-<a href="javascirpt:;">
-<span>跳转到手机站</span>mobile-agent</a>
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/list.php?tid={dede:field.id/}";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script></textarea>
+<a href="javascirpt:;"><span>跳转到手机站</span>mobile-agent</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.typeid function=gettoptype(@me,typename)/}</textarea>
-<a href="javascirpt:;">
-<span>顶级栏目</span>gettoptype</a>
+<a href="javascirpt:;"><span>顶级栏目</span>gettoptype</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.typeid function=mygettype(@me,typename)/}</textarea>
-<a href="javascirpt:;">
-<span>当前栏目</span>mygettype</a>
+<a href="javascirpt:;"><span>当前栏目</span>mygettype</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.typeid function=mygetretype(@me,typename)/}</textarea>
-<a href="javascirpt:;">
-<span>上一级栏目</span>mygetretype</a>
+<a href="javascirpt:;"><span>上一级栏目</span>mygetretype</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.position/}</textarea>
-<a href="javascirpt:;">
-<span>当前位置</span>position</a>
+<a href="javascirpt:;"><span>当前位置</span>position</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.typename/}</textarea>
-<a href="javascirpt:;">
-<span>栏目名称</span>dede:field.typename</a>
+<a href="javascirpt:;"><span>栏目名称</span>dede:field.typename</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.content/}</textarea>
-<a href="javascirpt:;">
-<span>栏目内容</span>dede:field.content</a>
+<a href="javascirpt:;"><span>栏目内容</span>dede:field.content</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:list pagesize='10' titlelen='250'}{/dede:list}</textarea>
-<a href="javascirpt:;">
-<span>分页文档列表</span>dede:list</a>
+<a href="javascirpt:;"><span>分页文档列表</span>dede:list</a>
 </li>
 <li>
 <textarea class="hide">
-<div class="my_pages">
-<ul>{dede:pagelist listitem="index,end,pre,next,pageno" listsize="3" pagelang=""/}</ul>
-</div>
-</textarea>
-<a href="javascirpt:;">
-<span>分页条标签</span>dede:pagelist</a>
+<div class="my_pages"><ul>{dede:pagelist listitem="index,end,pre,next,pageno" listsize="3" pagelang=""/}</ul></div></textarea>
+<a href="javascirpt:;"><span>分页条标签</span>dede:pagelist</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:itemcount listsize='4'/}</textarea>
-<a href="javascirpt:;">
-<span>列表页文章总数</span>dede:itemcount</a>
+<a href="javascirpt:;"><span>列表页文章总数</span>dede:itemcount</a>
 </li>
 <li>
 <textarea class="hide">
-.my_pages{clear:both!important;padding:5px 0 0;text-align:center;margin:5px auto;line-height:30px;} .my_pages ul{text-align:center;list-style:none;}
+.my_pages{clear:both!important;padding:5px 0 0;text-align:center;margin:5px auto;line-height:30px;}
+.my_pages ul{text-align:center;list-style:none;}
 .my_pages ul li{list-style:none;text-align:center;height:24px;display:inline;margin:0 2px;padding:0;overflow:hidden;white-space:nowrap;font-size:13px;}
-.my_pages ul li a{background:#fff;color:#555;display:inline;height:24px;overflow:hidden;padding:6px 10px;margin:0;border:
-#999 1px solid;} .my_pages ul li a:hover{color:#fff;background:#FF6600;border:#FF6600 1px solid;height:24px;overflow:hidden;text-decoration:none;cursor:pointer;}
+.my_pages ul li a{background:#fff;color:#555;display:inline;height:24px;overflow:hidden;padding:6px 10px;margin:0;border: #999 1px solid;}
+.my_pages ul li a:hover{color:#fff;background:#FF6600;border:#FF6600 1px solid;height:24px;overflow:hidden;text-decoration:none;cursor:pointer;}
 .my_pages ul li.thisclass a{background:#FF6600;border:#FF6600 1px solid;height:24px;overflow:hidden;color:#fff;font-weight:700;}</textarea>
-<a href="javascirpt:;">
-<span>分页条样式</span>pages CSS</a>
+<a href="javascirpt:;"><span>分页条样式</span>pages CSS</a>
 </li>
 <li>
 <textarea class="hide">
 搜索 {dede:global.keyword function=RemoveXSS(@me)/} 的结果</textarea>
-<a href="javascirpt:;">
-<span></span>搜索 XXX 的结果</a>
+<a href="javascirpt:;"><span></span>搜索 XXX 的结果</a>
 </li>
 <li>
 <textarea class="hide">
-[field:global name=autoindex runphp=yes](@me%4==1)? @me='
-<tr>':@me='';[/field:global]</textarea>
-<a href="javascirpt:;">
-<span>自增取余判断</span>autoindex %</a>
+[field:global name=autoindex runphp=yes](@me%4==1)? @me='<tr>':@me='';[/field:global]</textarea>
+<a href="javascirpt:;"><span>自增取余判断</span>autoindex %</a>
 </li>
 <li>
 <textarea class="hide">
@@ -281,483 +215,415 @@ window.location.href = "{dede:global.cfg_mobileurl/}/list.php?tid={dede:field.id
 {dede:pagelist listitem=next runphp=yes}preg_match_all('/href=[\'"]([^(\}>)]+)[\'"]/', @me, $reselt);@me = $reselt[1][0];{/dede:pagelist}</textarea>
 <a href="javascirpt:;">列表 下一页单独链接</a>
 </li>
-</ul>
-</div>
-<div class="col-xs-4 col-sm-5">
-<h3 class="text-center">首页</h3>
-<ul class="taglink tagicon3">
+				</ul>
+			</div>
+			<div class="col-xs-5 col-sm-5">
+				<h3 class="text-center">首页</h3>
+				<ul class="taglink tagicon3">
 <li>
 <textarea class="hide">
 <title>{dede:global.cfg_webname/}</title>
-<meta name="keywords" content="{dede:global.cfg_keywords/}" />
-<meta name="description" content="{dede:global.cfg_description/}" />
-</textarea>
-<a href="javascirpt:;">
-<span>标题|关键词|描述</span>&lt;title&gt;&lt;/title&gt;</a>
+<meta name="keywords" content="{dede:global.cfg_keywords/}"/>
+<meta name="description" content="{dede:global.cfg_description/}"/></textarea>
+<a href="javascirpt:;"><span>标题|关键词|描述</span>&lt;title&gt;&lt;/title&gt;</a>
 </li>
 <li>
 <textarea class="hide">
 <meta http-equiv="mobile-agent" content="format=xhtml;url={dede:global.cfg_mobileurl/}/index.php">
-<script type="text/javascript">
-if (window.location.toString().indexOf('pref=padindex') != -1) {} else {
-if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (
-/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/
-.test(navigator.userAgent))) {
-if (window.location.href.indexOf("?mobile") < 0) {
-try {
-if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-window.location.href = "{dede:global.cfg_mobileurl/}/index.php";
-} else if (/iPad/i.test(navigator.userAgent)) {} else {}
-} catch (e) {}
-}
-}
-}
-</script>
-</textarea>
-<a href="javascirpt:;">
-<span>跳转到手机站</span>mobile-agent</a>
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="{dede:global.cfg_mobileurl/}/index.php";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script></textarea>
+<a href="javascirpt:;"><span>跳转到手机站</span>mobile-agent</a>
 </li>
 <li>
 <textarea class="hide">
-<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
-</textarea>
-<a href="javascirpt:;">
-<span>程序编码</span>cfg_soft_lang</a>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}"/></textarea>
+<a href="javascirpt:;"><span>程序编码</span>cfg_soft_lang</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:include filename="head.htm"/}</textarea>
-<a href="javascirpt:;">
-<span>引入头部模板</span>include head</a>
+<a href="javascirpt:;"><span>引入头部模板</span>include head</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:include filename="footer.htm"/}</textarea>
-<a href="javascirpt:;">
-<span>引入底部模板</span>include footer</a>
+<a href="javascirpt:;"><span>引入底部模板</span>include footer</a>
 </li>
 <li class="mt20">
 <textarea class="hide">
 {dede:arclist typeid='' row='' titlelen='50' channelid='' addfields='' flag='' isweight='' orderby='' orderway='' limit=''}{/dede:arclist}</textarea>
-<a href="javascirpt:;">
-<span>文档列表(常用)</span>dede:arclist</a>
+<a href="javascirpt:;"><span>文档列表(常用)</span>dede:arclist</a>
 </li>
 <li>
 <textarea class="hide">
 [field:arcurl/]</textarea>
-<a href="javascirpt:;">
-<span>文章链接</span>field:arcurl</a>
+<a href="javascirpt:;"><span>文章链接</span>field:arcurl</a>
 </li>
 <li>
 <textarea class="hide">
 [field:title/]</textarea>
-<a href="javascirpt:;">
-<span>文章标题</span>field:title</a>
+<a href="javascirpt:;"><span>文章标题</span>field:title</a>
 </li>
 <li>
 <textarea class="hide">
 [field:litpic/]</textarea>
-<a href="javascirpt:;">
-<span>文章缩略图</span>field:litpic</a>
+<a href="javascirpt:;"><span>文章缩略图</span>field:litpic</a>
 </li>
 <li>
 <textarea class="hide">
 [field:description function=cn_substr(@me,50)/]</textarea>
-<a href="javascirpt:;">
-<span>文章描述</span>field:description</a>
+<a href="javascirpt:;"><span>文章描述</span>field:description</a>
 </li>
 <li>
 <textarea class="hide">
 [field:pubdate function="MyDate('Y-m-d',@me)"/]</textarea>
-<a href="javascirpt:;">
-<span>时间格式</span>field:pubdate</a>
+<a href="javascirpt:;"><span>时间格式</span>field:pubdate</a>
 </li>
 <li>
 <textarea class="hide">
 [field:pubdate function='strftime("%b %d, %Y",@me)'/]</textarea>
-<a href="javascirpt:;">
-<span>时间格式</span>May 15, 2008</a>
+<a href="javascirpt:;"><span>时间格式</span>May 15, 2008</a>
 </li>
 <li class="mt20">
 <textarea class="hide">
 {dede:type typeid=}[field:typeurl/]{/dede:type}</textarea>
-<a href="javascirpt:;">
-<span>某一个栏目链接</span>dede:type</a>
+<a href="javascirpt:;"><span>某一个栏目链接</span>dede:type</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:type typeid=}[field:content function=cn_substr(html2text(@me),380)/]{/dede:type}</textarea>
-<a href="javascirpt:;">
-<span>首页栏目内容</span>dede:type:content</a>
+<a href="javascirpt:;"><span>首页栏目内容</span>dede:type:content</a>
 </li>
 <li>
 <textarea class="hide">
 <form name="formsearch" action="/plus/search.php">
 <input type="hidden" name="pagesize" value="15">
-<input type="hidden" name="kwtype" value="0" />
-</textarea>
-<a href="javascirpt:;">
-<span>电脑站搜索框</span>form search</a>
+<input type="hidden" name="kwtype" value="0"/></textarea>
+<a href="javascirpt:;"><span>电脑站搜索框</span>form search</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:myppt typeid=1 row=6}[field:url/][field:pic/][field:pic2/][field:title/]{/dede:myppt}</textarea>
-<a href="javascirpt:;">
-<span>幻灯大图</span>dede:myppt</a>
+<a href="javascirpt:;"><span>幻灯大图</span>dede:myppt</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:flink type='text' row='100'}[field:url/][field:webname/]{/dede:flink}</textarea>
-<a href="javascirpt:;">
-<span>友情链接</span>dede:flink</a>
+<a href="javascirpt:;"><span>友情链接</span>dede:flink</a>
 </li>
-</ul>
-</div>
-<div class="col-xs-5 col-sm-5">
-<h3 class="text-center">头尾</h3>
-<ul class="taglink tagicon2">
+				</ul>
+			</div>
+			<div class="col-xs-5 col-sm-5">
+				<h3 class="text-center">头尾</h3>
+				<ul class="taglink tagicon2">
 <li>
 <textarea class="hide">
 {dede:global.cfg_webname/}</textarea>
-<a href="javascirpt:;">
-<span>站点名称</span>cfg_webname</a>
+<a href="javascirpt:;"><span>站点名称</span>cfg_webname</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:global.cfg_basehost/}</textarea>
-<a href="javascirpt:;">
-<span>完整网址</span>cfg_basehost</a>
+<a href="javascirpt:;"><span>完整网址</span>cfg_basehost</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:global.cfg_basehost function=str_replace('http://','',@me);/}</textarea>
-<a href="javascirpt:;">
-<span>独立网址</span>www.xxx.com</a>
+<a href="javascirpt:;"><span>独立网址</span>www.xxx.com</a>
 </li>
 <li class="mt20">
 <textarea class="hide">
 {dede:field name=typeid runphp=yes}(@me=='')? @me=' class="current"':@me='';{/dede:field}</textarea>
-<a href="javascirpt:;">
-<span>首页高亮</span>home current</a>
+<a href="javascirpt:;"><span>首页高亮</span>home current</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:channelartlist row=7 typeid=top currentstyle=current}{dede:field.typeurl/}{dede:field.typename/}{/dede:channelartlist}</textarea>
-<a href="javascirpt:;">
-<span>多个栏目调用</span>dede:channelartlist</a>
+<a href="javascirpt:;"><span>多个栏目调用</span>dede:channelartlist</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.currentstyle/}</textarea>
-<a href="javascirpt:;">
-<span>高亮样式</span>dede:field.currentstyle</a>
+<a href="javascirpt:;"><span>高亮样式</span>dede:field.currentstyle</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:global name=itemindex/}</textarea>
-<a href="javascirpt:;">
-<span>自增</span>dede:global.itemindex</a>
+<a href="javascirpt:;"><span>自增</span>dede:global.itemindex</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:global name=itemindex runphp=yes}if(@me==1)@me=' class="current"';else @me='';{/dede:global}</textarea>
-<a href="javascirpt:;">
-<span>自增判断</span>dede:global.itemindex +</a>
+<a href="javascirpt:;"><span>自增判断</span>dede:global.itemindex +</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:global name=iflast runphp=yes}if (@me) @me = '';else @me = '|';{/dede:global}</textarea>
-<a href="javascirpt:;">
-<span>是否最后一个</span>dede:global.iflast</a>
+<a href="javascirpt:;"><span>是否最后一个</span>dede:global.iflast</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field.ispart runphp=yes}(@me==2)? @me='target="_blank"':@me='';{/dede:field.ispart}</textarea>
-<a href="javascirpt:;">
-<span></span>栏目外部链接新窗口打开</a>
+<a href="javascirpt:;"><span></span>栏目外部链接新窗口打开</a>
 </li>
 <li>
 <textarea class="hide">
-{dede:field name=typeid runphp=yes}global $dsql;$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden
-<>1 order by sortrank asc limit 0,1";$row = $dsql->GetOne($sql);@me=is_array($row)?'有下级':'没下级';{/dede:field}</textarea>
-<a href="javascirpt:;">
-<span></span>判断是否有下级栏目</a>
+{dede:field name=typeid runphp=yes}global $dsql;$sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0,1";$row = $dsql->GetOne($sql);@me=is_array($row)?'有下级':'没下级';{/dede:field}</textarea>
+<a href="javascirpt:;"><span></span>判断是否有下级栏目</a>
 </li>
 <li>
 <textarea class="hide">
 <ul>
-{dede:channelartlist row=7 typeid=top}
-<!-- 顶级 -->
-<li class="top">
-<a href="{dede:field.typeurl/}">{dede:field name='typename'/}</a>
-<ul class="sub">
-{dede:channel type=son noself=yes}
-<!-- 二级 -->
-<li>
-<a href="[field:typeurl/]" title="[field:typename/]">[field:typename/]</a>
-<ul>
+	{dede:channelartlist row=7 typeid=top}
+	<!-- 顶级 -->
+	<li class="top">
+		<a href="{dede:field.typeurl/}" >{dede:field name='typename'/}</a>
+		<ul class="sub">
+		{dede:channel type=son noself=yes}
+		<!-- 二级 -->
+		<li>
+		<a href="[field:typeurl/]"  title="[field:typename/]">[field:typename/]</a>
+		<ul>
 <!-- 三级/四级 -->
-[field:id runphp=yes] global $dsql; $sql = "Select id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath
-FROM `#@__arctype` WHERE reid=@me And ishidden
-<>1 order by sortrank asc limit 0,10"; $dsql->SetQuery($sql); $dsql->Execute('t'); $result = ''; while($row =
-$dsql->GetArray('t')) { $row['typeurl'] = GetOneTypeUrlA($row); $result .= "
-<a href='{$row[typeurl]}'>{$row[typename]}</a>"; //四级 $nsql = "Select id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath
-FROM `#@__arctype` WHERE reid=$row[id] And ishidden
-<>1 order by sortrank asc limit 0,10"; $dsql->SetQuery($nsql); $dsql->Execute('n'); while($nrow = $dsql->GetArray('n'))
-{ $nrow['typeurl'] = GetOneTypeUrlA($nrow); $result .= "
-<a href='{$nrow[typeurl]}'>{$nrow[typename]}</a>"; } } @me = $result; [/field:id]
-</ul>
-</li>
-{/dede:channel}
-</ul>
-</li>
-{/dede:channelartlist}
-</ul>
-</textarea>
-<a href="javascirpt:;">
-<span></span>dede:channelartlist 三、四级</a>
+[field:id runphp=yes]
+global $dsql;
+$sql = "Select id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath FROM `#@__arctype` WHERE reid=@me And ishidden<>1 order by sortrank asc limit 0,10";
+$dsql->SetQuery($sql);
+$dsql->Execute('t');
+$result = '';
+while($row = $dsql->GetArray('t'))
+{
+	$row['typeurl'] = GetOneTypeUrlA($row);
+	$result .= "<a href='{$row[typeurl]}'>{$row[typename]}</a>";
+	//四级
+	$nsql = "Select id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath FROM `#@__arctype` WHERE reid=$row[id] And ishidden<>1 order by sortrank asc limit 0,10";
+	$dsql->SetQuery($nsql);
+	$dsql->Execute('n');
+	while($nrow = $dsql->GetArray('n'))
+	{
+		$nrow['typeurl'] = GetOneTypeUrlA($nrow);
+		$result .= "<a href='{$nrow[typeurl]}'>{$nrow[typename]}</a>";
+	}
+}
+@me = $result;
+[/field:id]
+		</ul>
+		</li>
+		{/dede:channel}
+		</ul>
+	</li>    
+	{/dede:channelartlist}
+</ul></textarea>
+<a href="javascirpt:;"><span></span>dede:channelartlist 三、四级</a>
 </li>
 <li class="mt20">
 <textarea class="hide">
 {dede:channel type=son noself=yes}[field:typelink/][field:typename/]{/dede:channel}</textarea>
-<a href="javascirpt:;">
-<span>子栏目调用</span>dede:channel</a>
-</li>
-<li>
+<a href="javascirpt:;"><span>子栏目调用</span>dede:channel</a>
+</li><li>
 <textarea class="hide">
 [field:global name=autoindex/]</textarea>
-<a href="javascirpt:;">
-<span>自增</span>field:global.autoindex</a>
+<a href="javascirpt:;"><span>自增</span>field:global.autoindex</a>
 </li>
 <li>
 <textarea class="hide">
 [field:global name=autoindex runphp=yes](@me==1)? @me=' class="current"':@me='';[/field:global]</textarea>
-<a href="javascirpt:;">
-<span>自增判断</span>field:global.autoindex +</a>
+<a href="javascirpt:;"><span>自增判断</span>field:global.autoindex +</a>
 </li>
 <li>
 <textarea class="hide">
 [field:global name=iflast runphp=yes]if (@me) @me = '';else @me = '|';[/field:global]</textarea>
-<a href="javascirpt:;">
-<span>是否最后一个</span>field:global.iflast2</a>
+<a href="javascirpt:;"><span>是否最后一个</span>field:global.iflast2</a>
 </li>
 <li>
 <textarea class="hide">
 [field:ispart runphp=yes](@me==2)? @me='target="_blank"':@me='';[/field:ispart]</textarea>
-<a href="javascirpt:;">
-<span></span>栏目外部链接新窗口打开</a>
+<a href="javascirpt:;"><span></span>栏目外部链接新窗口打开</a>
 </li>
-</ul>
-</div>
-<div class="col-xs-5 col-sm-5">
-<h3 class="text-center">手机</h3>
-<ul class="taglink tagicon1">
+				</ul>
+			</div>
+			<div class="col-xs-5 col-sm-5">
+				<h3 class="text-center">手机</h3>
+				<ul class="taglink tagicon1">
 <li>
 <textarea class="hide">
 {dede:global.cfg_mobileurl/}</textarea>
-<a href="javascirpt:;">
-<span>手机站路径</span>cfg_mobileurl</a>
+<a href="javascirpt:;"><span>手机站路径</span>cfg_mobileurl</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:global.cfg_mobileurl/}/index.php</textarea>
-<a href="javascirpt:;">
-<span>首页链接</span>m/index.php</a>
+<a href="javascirpt:;"><span>首页链接</span>m/index.php</a>
 </li>
 <li>
 <textarea class="hide">
 [field:global.cfg_basehost/]</textarea>
-<a href="javascirpt:;">
-<span>中括号网址</span>cfg_basehost</a>
+<a href="javascirpt:;"><span>中括号网址</span>cfg_basehost</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:type typeid=}[field:global.cfg_mobileurl/]/list.php?tid=[field:id/]{/dede:type}</textarea>
-<a href="javascirpt:;">
-<span>栏目链接</span>dede:type</a>
+<a href="javascirpt:;"><span>栏目链接</span>dede:type</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:global.cfg_mobileurl/}/list.php?tid={dede:field.typeid/}</textarea>
-<a href="javascirpt:;">
-<span>栏目链接</span>dede:field.typeurl</a>
+<a href="javascirpt:;"><span>栏目链接</span>dede:field.typeurl</a>
 </li>
 <li>
 <textarea class="hide">
 [field:global.cfg_mobileurl/]/view.php?aid=[field:id/]</textarea>
-<a href="javascirpt:;">
-<span>文档绝对路径</span>field:arcurl</a>
+<a href="javascirpt:;"><span>文档绝对路径</span>field:arcurl</a>
 </li>
 <li>
 <textarea class="hide">
 [field:global.cfg_basehost/][field:litpic/]</textarea>
-<a href="javascirpt:;">
-<span>图片绝对路径</span>field:litpic</a>
+<a href="javascirpt:;"><span>图片绝对路径</span>field:litpic</a>
 </li>
 <li>
 <textarea class="hide">
 <form name="formsearch" action="/plus/search.php">
 <input type="hidden" name="pagesize" value="15">
-<input type="hidden" name="kwtype" value="0" />
+<input type="hidden" name="kwtype" value="0"/>
 <input type="hidden" name="mobile" value="1" />
-</form>
-</textarea>
-<a href="javascirpt:;">
-<span>搜索框代码</span>mobile search</a>
+</form></textarea>
+<a href="javascirpt:;"><span>搜索框代码</span>mobile search</a>
 </li>
 <li class="mt20">
 <textarea class="hide">
 {dede:arclist idlist=1}[field:arcurl/]{/dede:arclist}</textarea>
-<a href="javascirpt:;">
-<span>指定文章id</span>arclist idlist</a>
+<a href="javascirpt:;"><span>指定文章id</span>arclist idlist</a>
 </li>
 <li>
 <textarea class="hide">
-{dede:field name=array runphp=yes} @me = (@me['litpic'] == '/images/defaultpic.gif' ? "" : "
-<a href='{@me[' arcurl ']}'>
-<img src='{@me[' litpic ']}'>
-</a>"); {/dede:field}
-</textarea>
-<a href="javascirpt:;">
-<span>数组</span>{dede:field runphp=yes}</a>
+{dede:field name=array runphp=yes}
+@me = (@me['litpic'] == '/images/defaultpic.gif' ? "" : "<a href='{@me['arcurl']}'><img src='{@me['litpic']}'></a>"); 
+{/dede:field}</textarea>
+<a href="javascirpt:;"><span>数组</span>{dede:field runphp=yes}</a>
 </li>
 <li>
 <textarea class="hide">
-[field:array runphp=yes]@me = (empty(@me['litpic']) ? "" : "
-<a href='{@me[' arcurl ']}' class='preview'>
-<img src='{@me[' litpic ']}'/>
-</a>"); [/field:array]</textarea>
-<a href="javascirpt:;">
-<span>数组</span>[field:array runphp=yes]</a>
+[field:array runphp=yes]@me = (empty(@me['litpic']) ? "" : "<a href='{@me['arcurl']}' class='preview'><img src='{@me['litpic']}'/></a>"); [/field:array]</textarea>
+<a href="javascirpt:;"><span>数组</span>[field:array runphp=yes]</a>
 </li>
 <li>
 <textarea class="hide">
 {dede:field name=topid runphp=yes}if(@me)@me=''; else @me=' class="current"';{/dede:field}</textarea>
-<a href="javascirpt:;">
-<span>顶级栏目判断+高亮</span>field:topid</a>
+<a href="javascirpt:;"><span>顶级栏目判断+高亮</span>field:topid</a>
 </li>
 <li>
 <textarea class="hide">
-{dede:channel type='son' currentstyle="
-<a href='~typelink~' title='~typename~' class='cur'>~typename~</a>"}
+{dede:channel type='son' currentstyle="<a href='~typelink~' title='~typename~' class='cur'>~typename~</a>"}
 <a href='[field:typelink /]' title='[field:typename/]'>[field:typename/]</a>
 {/dede:channel}</textarea>
 <a href="javascirpt:;">dede:channel currentstyle</a>
 </li>
 <li>
 <textarea class="hide">
-{dede:field.body runphp=yes} global $cfg_basehost; $str = @me; $search = '/(
-<img.*?)width=([ "\'])?.*?(?(2)\2|\s)([^>]+>)/is';//过滤img里的width
-$search1 = '/(<img.*?)height=(["\ '])?.*?(?(2)\2|\s)([^>]+>)/is';//过滤img里的height $search2='#(<img.*?style=".*?)width:\d+px;([^"]*?.*?>)#i'
-;//过滤img里style的width $search3='#(<img.*?style=".*?)height:\d+px;([^"]*?.*?>)#i' ;//过滤img里style的height $content=p
-reg_replace($search, '$1$3',$str); $content=p reg_replace($search1, '$1$3',$content); $content=p reg_replace($search2,
-'$1$2',$content); $content=p reg_replace($search3, '$1$2',$content); @me=$ content; @me=s tr_replace(
-'/uploads/allimg/', $cfg_basehost. '/uploads/allimg/', $content);//手机版图片使用绝对路径 {/dede:field.body}</textarea>
+{dede:field.body runphp=yes}
+global $cfg_basehost;
+$str = @me;
+$search = '/(<img.*?)width=(["\'])?.*?(?(2)\2|\s)([^>]+>)/is';//过滤img里的width
+$search1 = '/(<img.*?)height=(["\'])?.*?(?(2)\2|\s)([^>]+>)/is';//过滤img里的height
+$search2 = '#(<img.*?style=".*?)width:\d+px;([^"]*?.*?>)#i';//过滤img里style的width
+$search3 = '#(<img.*?style=".*?)height:\d+px;([^"]*?.*?>)#i';//过滤img里style的height
+$content = preg_replace($search,'$1$3',$str);
+$content = preg_replace($search1,'$1$3',$content);
+$content = preg_replace($search2,'$1$2',$content);
+$content = preg_replace($search3,'$1$2',$content);
+@me = $content;
+@me = str_replace('/uploads/allimg/', $cfg_basehost.'/uploads/allimg/', $content);//手机版图片使用绝对路径
+{/dede:field.body}</textarea>
 <a href="javascirpt:;">手机版文章内容过滤图片的宽高</a>
 </li>
-</ul>
-</div>
-</div>
-			<header class="article-header" style="margin:20px 0;">
-				<h1 class="article-title">不常用模板标签</h1>
-			</header>
-			<div class="row">
-				<div class="col-xs-12 col-sm-6">
-					<p>
-						<code>array runphp</code>
-					</p>
-					<pre><code class="language-html">{dede:field name=array runphp=yes}
+				</ul>
+			</div>
+		</div>
+		<header class="article-header" style="margin:20px 0;">
+			<h1 class="article-title">不常用模板标签</h1>
+		</header>
+		<div class="row">
+			<div class="col-xs-12 col-sm-6">
+<p><code>array runphp</code> </p>
+<pre><code class="language-html">{dede:field name=array runphp=yes}
 @me = (@me['litpic'] == '/images/defaultpic.gif' ? "" : "&lt;div class='image_frame'&gt;&lt;a href='{@me['arcurl']}'&gt;&lt;img src='{@me['litpic']}'&gt;&lt;/a&gt;&lt;/div&gt;"); 
 {/dede:field}</code></pre>
-					<pre><code class="language-html">[field:array runphp=yes]@me = (empty(@me['litpic']) ? "" : "&lt;a href='{@me['arcurl']}' class='preview'&gt;&lt;img src='{@me['litpic']}'/&gt;&lt;/a&gt;"); [/field:array]</code></pre>
-					<pre><code class="language-html">[field:array runphp=yes]
+<pre><code class="language-html">[field:array runphp=yes]@me = (empty(@me['litpic']) ? "" : "&lt;a href='{@me['arcurl']}' class='preview'&gt;&lt;img src='{@me['litpic']}'/&gt;&lt;/a&gt;"); [/field:array]</code></pre>
+<pre><code class="language-html">[field:array runphp=yes]
 if($GLOBALS[autoindex]%4==0)@me="{@me['litpic']}";else @me="{@me['title']}";
 [/field:array]</code></pre>
 
-					<p>
-						<code>litpic runphp</code>
-					</p>
-					<pre><code class="language-html">[field:litpic runphp=yes]if(@me == '/images/defaultpic.gif')@me = ' style="display:none"';else @me = '';[/field:litpic]</code></pre>
-					<pre><code class="language-html">{dede:field.litpic runphp=yes}if(@me == '/images/defaultpic.gif')@me = ' style="display:none"';else @me = '';{/dede:field.litpic}</code></pre>
+<p><code>litpic runphp</code> </p>
+<pre><code class="language-html">[field:litpic runphp=yes]if(@me == '/images/defaultpic.gif')@me = ' style="display:none"';else @me = '';[/field:litpic]</code></pre>
+<pre><code class="language-html">{dede:field.litpic runphp=yes}if(@me == '/images/defaultpic.gif')@me = ' style="display:none"';else @me = '';{/dede:field.litpic}</code></pre>
 
-					<p>
-						<code>ispart runphp</code> 自定义字段</p>
-					<pre><code class="language-html">[field:ispart runphp=yes]if(@me == ''){@me = "";}else{@me = "字段内容为：@me";}[/field:ispart]</code></pre>
-					<pre><code class="language-html">{dede:field.ispart runphp=yes}if(@me == '')@me = "";else @me = @me;{/dede:field.ispart}</code></pre>
+<p><code>ispart runphp</code> 自定义字段</p>
+<pre><code class="language-html">[field:ispart runphp=yes]if(@me == ''){@me = "";}else{@me = "字段内容为：@me";}[/field:ispart]</code></pre>
+<pre><code class="language-html">{dede:field.ispart runphp=yes}if(@me == '')@me = "";else @me = @me;{/dede:field.ispart}</code></pre>
 
-					<p>
-						<code>May 15, 2017</code> 时间格式</p>
-					<pre><code class="language-html">[field:pubdate function='strftime("%b %d, %Y",@me)'/]</code></pre>
+<p><code>May 15, 2017</code> 时间格式</p>
+<pre><code class="language-html">[field:pubdate function='strftime("%b %d, %Y",@me)'/]</code></pre>
 
-					<p>
-						<code>channel</code> currentstyle</p>
-					<pre><code class="language-html">&lt;li{dede:field name=topid runphp=yes}if(@me)@me=''; else @me=' class="menuCur"';{/dede:field}&gt;&lt;a href="{dede:field.typeid function=gettoptype(@me,link)/}"&gt;全部文章&lt;/a&gt;&lt;/li&gt;
+<p><code>channel</code> currentstyle</p>
+<pre><code class="language-html">&lt;li{dede:field name=topid runphp=yes}if(@me)@me=''; else @me=' class="menuCur"';{/dede:field}&gt;&lt;a href="{dede:field.typeid function=gettoptype(@me,link)/}"&gt;全部文章&lt;/a&gt;&lt;/li&gt;
 {dede:channel type='son' currentstyle="&lt;li class='menuCur'&gt;&lt;a href='~typelink~' title='~typename~'&gt;~typename~&lt;/a&gt;&lt;/li&gt;"}
 &lt;li&gt;&lt;a href='[field:typelink /]' title='[field:typename/]'&gt;[field:typename/]&lt;/a&gt;&lt;/li&gt;
 {/dede:channel}</code></pre>
 
-					<p>
-						<code>jquery</code> 栏目高亮</p>
-					<pre><code class="language-html">&lt;script language="javascript" type="text/javascript"&gt;
+<p><code>jquery</code> 栏目高亮</p>
+<pre><code class="language-html">&lt;script language="javascript" type="text/javascript"&gt;
 $(document).ready(function(){ 
-var cat_id = "cat_{dede:field.typeid/}";
-var up_id = "cat_{dede:field.typeid runphp='yes'"}
-global $dsql ;
-$reid = $dsql-&gt;GetOne("SELECT reid FROM `#@__arctype` where id=@me");
-$reid = $reid['reid'];
-@me=$reid;
+	var cat_id = "cat_{dede:field.typeid/}";
+	var up_id = "cat_{dede:field.typeid runphp='yes'"}
+	global $dsql ;
+	$reid = $dsql-&gt;GetOne("SELECT reid FROM `#@__arctype` where id=@me");
+	$reid = $reid['reid'];
+	@me=$reid;
 {/dede:field.typeid}";
-$(".sb_navul ul").each(function () {
-if ($(this).attr("id") == up_id || $(this).attr("id") == cat_id) {
-$(this).show();
-}
-});
-$("#cat_{dede:field.typeid/}").addClass("red");
+	$(".sb_navul ul").each(function () {
+		if ($(this).attr("id") == up_id || $(this).attr("id") == cat_id) {
+			$(this).show();
+		}
+	});
+	$("#cat_{dede:field.typeid/}").addClass("red");
 });
 &lt;/script&gt;
 
 &lt;div class="sb_nav"&gt;
-&lt;div class="sb_navul"&gt;
-{dede:channelartlist typeid=2}
-&lt;li&gt;
-&lt;a href="{dede:field name='typeurl'/}" title="{dede:field name='typename'/}"&gt;{dede:field name='typename'/}&lt;/a&gt;
-&lt;ul id="cat_{dede:field name='typeid'/}" class="none"&gt;
-{dede:channel type='sun' row='20' noself='yes'}
-&lt;li&gt;
-&lt;a href="[field:typeurl/]" title="[field:typename/]" id="cat_[field:id/]"&gt;[field:typename/]&lt;/a&gt;
-&lt;/li&gt;
-{/dede:channel}
-&lt;/ul&gt;
-&lt;/li&gt;
-{/dede:channelartlist}
-&lt;/div&gt;
+	&lt;div class="sb_navul"&gt;
+	{dede:channelartlist typeid=2}
+		&lt;li&gt;
+			&lt;a href="{dede:field name='typeurl'/}" title="{dede:field name='typename'/}"&gt;{dede:field name='typename'/}&lt;/a&gt;
+			&lt;ul id="cat_{dede:field name='typeid'/}" class="none"&gt;
+			{dede:channel type='sun' row='20' noself='yes'}
+				&lt;li&gt;
+					&lt;a href="[field:typeurl/]" title="[field:typename/]" id="cat_[field:id/]"&gt;[field:typename/]&lt;/a&gt;
+				&lt;/li&gt;
+			{/dede:channel}
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	{/dede:channelartlist}
+	&lt;/div&gt;
 &lt;/div&gt;</code></pre>
-					<p>
-						<code>2017年1月10日</code> 转时间戳,再单独拿Ymd </p>
-					<pre><code class="language-php">年：{dede:field.begin_time function="MyDate('Y',GetMkTime(@me))"/}
+<p><code>2017年1月10日</code> 转时间戳,再单独拿Ymd </p>
+<pre><code class="language-php">年：{dede:field.begin_time function="MyDate('Y',GetMkTime(@me))"/}
 月：{dede:field.begin_time function="MyDate('m',GetMkTime(@me))"/}
 日：{dede:field.begin_time function="MyDate('d',GetMkTime(@me))"/}</code></pre>
-					<p>
-						<code>19/10/2017</code> 转换
-						<code>2017年10月19日</code>
-					</p>
-					<pre><code class="language-php">{dede:field.begin_time function="MyDate('Y年m月d日',GetMkTime(implode('-',array_reverse(explode('/',@me)))))"/}</code></pre>
-				</div>
-				<div class="col-xs-12 col-sm-6">
-					<p>
-						<code>二级、三级、四级</code>
-					</p>
-					<pre><code class="language-html">&lt;ul&gt;
-{dede:channelartlist row=7 typeid=top}
-&lt;!-- 顶级 --&gt;
-&lt;li class="top"&gt;
-&lt;a href="{dede:field.typeurl/}" &gt;{dede:field name='typename'/}&lt;/a&gt;
-&lt;ul class="sub"&gt;
-{dede:channel type=son noself=yes}
-&lt;!-- 二级 --&gt;
-&lt;li&gt;
-&lt;a href="[field:typeurl/]"  title="[field:typename/]"&gt;[field:typename/]&lt;/a&gt;
-&lt;ul&gt;
+<p><code>19/10/2017</code> 转换 <code>2017年10月19日</code> </p>
+<pre><code class="language-php">{dede:field.begin_time function="MyDate('Y年m月d日',GetMkTime(implode('-',array_reverse(explode('/',@me)))))"/}</code></pre>
+			</div>
+			<div class="col-xs-12 col-sm-6">
+<p><code>二级、三级、四级</code> </p>
+<pre><code class="language-html">&lt;ul&gt;
+	{dede:channelartlist row=7 typeid=top}
+	&lt;!-- 顶级 --&gt;
+	&lt;li class="top"&gt;
+		&lt;a href="{dede:field.typeurl/}" &gt;{dede:field name='typename'/}&lt;/a&gt;
+		&lt;ul class="sub"&gt;
+		{dede:channel type=son noself=yes}
+		&lt;!-- 二级 --&gt;
+		&lt;li&gt;
+		&lt;a href="[field:typeurl/]"  title="[field:typename/]"&gt;[field:typename/]&lt;/a&gt;
+		&lt;ul&gt;
 &lt;!-- 三级 --&gt;
 [field:id runphp=yes]
 global $dsql;
@@ -767,20 +633,20 @@ $dsql-&gt;Execute('t');
 $result = '';
 while($row = $dsql-&gt;GetArray('t'))
 {
-$typename = $row['typename'];
-$typeurl = GetOneTypeUrlA($row);
+	$typename = $row['typename'];
+	$typeurl = GetOneTypeUrlA($row);
 $result .= &lt;&lt;&lt; TPL
 &lt;li&gt;&lt;a href="{$typeurl}"&gt;{$typename}&lt;/a&gt;&lt;/li&gt;
 TPL;
 }
 @me = $result;
 [/field:id]
-&lt;/ul&gt;
-&lt;/li&gt;
-{/dede:channel}
-&lt;/ul&gt;
-&lt;/li&gt;    
-{/dede:channelartlist}
+		&lt;/ul&gt;
+		&lt;/li&gt;
+		{/dede:channel}
+		&lt;/ul&gt;
+	&lt;/li&gt;    
+	{/dede:channelartlist}
 &lt;/ul&gt;
 &lt;!-- /Wiznav --&gt;
 
@@ -793,45 +659,41 @@ $dsql-&gt;Execute('t');
 $result = '';
 while($row = $dsql-&gt;GetArray('t'))
 {
-$row['typeurl'] = GetOneTypeUrlA($row);
-$result .= "&lt;a href='{$row[typeurl]}'&gt;{$row[typename]}&lt;/a&gt;";
-//四级
-$nsql = "Select id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath FROM `#@__arctype` WHERE reid=$row[id] And ishidden&lt;&gt;1 order by sortrank asc limit 0,10";
-$dsql-&gt;SetQuery($nsql);
-$dsql-&gt;Execute('n');
-while($nrow = $dsql-&gt;GetArray('n'))
-{
-$nrow['typeurl'] = GetOneTypeUrlA($nrow);
-$result .= "&lt;a href='{$nrow[typeurl]}'&gt;{$nrow[typename]}&lt;/a&gt;";
-}
+	$row['typeurl'] = GetOneTypeUrlA($row);
+	$result .= "&lt;a href='{$row[typeurl]}'&gt;{$row[typename]}&lt;/a&gt;";
+	//四级
+	$nsql = "Select id,typename,typedir,isdefault,ispart,defaultname,namerule2,moresite,siteurl,sitepath FROM `#@__arctype` WHERE reid=$row[id] And ishidden&lt;&gt;1 order by sortrank asc limit 0,10";
+	$dsql-&gt;SetQuery($nsql);
+	$dsql-&gt;Execute('n');
+	while($nrow = $dsql-&gt;GetArray('n'))
+	{
+		$nrow['typeurl'] = GetOneTypeUrlA($nrow);
+		$result .= "&lt;a href='{$nrow[typeurl]}'&gt;{$nrow[typename]}&lt;/a&gt;";
+	}
 }
 @me = $result;
 [/field:id]</code></pre>
 
-					<p>
-						<code>dede:sql 根据自定义字段填的id获取文档</code>
-					</p>
-					<pre><code class="language-html">{dede:sql sql="SELECT * FROM #@__archives WHERE arcrank&gt;-1 AND id in(~myid~) ORDER BY FIELD(id,~myid~)"}
+<p><code>dede:sql 根据自定义字段填的id获取文档</code> </p>
+<pre><code class="language-html">{dede:sql sql="SELECT * FROM #@__archives WHERE arcrank&gt;-1 AND id in(~myid~) ORDER BY FIELD(id,~myid~)"}
 &lt;a href="[field:id runphp=yes]$id=@me;$url=GetOneArchive($id);@me=$url['arcurl'];[/field:id]"&gt;&lt;img src="[field:litpic/]"&gt;[field:title/]&lt;/a&gt;
 &lt;p&gt;[field:description/]&lt;/p&gt;
 {/dede:sql}</code></pre>
-					<p>
-						<code>还需要修改 include\taglib\sql.lib.php 让它支持数字</code>
-					</p>
-					<pre><code class="language-php">if(is_numeric(str_replace(',','',$refObj-&gt;Fields[$value])))
+<p><code>还需要修改 include\taglib\sql.lib.php 让它支持数字</code> </p>
+<pre><code class="language-php">if(is_numeric(str_replace(',','',$refObj-&gt;Fields[$value])))
 {
-$sql = str_replace($conditions[0][$key], addslashes($refObj-&gt;Fields[$value]), $sql);
+	$sql = str_replace($conditions[0][$key], addslashes($refObj-&gt;Fields[$value]), $sql);
 }
 else
 {
-$sql = str_replace($conditions[0][$key], "'".addslashes($refObj-&gt;Fields[$value])."'", $sql);
+	$sql = str_replace($conditions[0][$key], "'".addslashes($refObj-&gt;Fields[$value])."'", $sql);
 }</code></pre>
-				</div>
 			</div>
 		</div>
 	</div>
-	<script language="javascript" src="js/jquery.zclip.min.js"></script>
-	<script language="javascript" src="js/copy.js"></script>
+</div>
+<script language="javascript" src="js/jquery.zclip.min.js"></script>
+<script language="javascript" src="js/copy.js"></script>
 </body>
 
 </html>
