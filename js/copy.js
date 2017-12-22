@@ -22,7 +22,6 @@ var cfg = {
 };
 $(document).ready(function(){
     $(".taglink a").mouseover(function(){
-		console.log($(this).siblings().text())
 		if(!$(this).data('init')){$(this).zclip(cfg);$(this).data('init',true)}
 	})
 });
